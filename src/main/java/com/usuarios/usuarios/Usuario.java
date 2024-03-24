@@ -1,17 +1,25 @@
 package com.usuarios.usuarios;
 
+import java.util.List;
+
 public class Usuario {
 
     private int id;
+    private String nombre;
     private String email;
-    private String usuario;
+    private String user;
     private String password;
+    private List<Rol> roles;
 
-    public Usuario(int i, String e, String u, String p){
-        this.id = i;
-        this.email = e;
-        this.usuario = u;
-        this.password = p;
+   
+
+    public Usuario(int id, String nombre, String email, String user, String password, List<Rol> roles){
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.user = user;
+        this.password = password;
+        this.roles = roles;
     }
 
     public int getId() {
@@ -22,14 +30,20 @@ public class Usuario {
         return email;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getUser() {
+        return user;
     }
 
     public String getPassword() {
         return password;
     }
 
-    
+    public String getNombre() {
+        return nombre;
+    }  
+
+    public List<Rol> getRoles() {
+        return roles;
+    }
     
 }
